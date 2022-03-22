@@ -1,3 +1,12 @@
+import { Route, Routes } from 'react-router-dom';
+
+import { Home, Login } from 'views';
+
 export const App = () => {
-  return <h1>Hello World !</h1>;
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+    </Routes>
+  );
 };

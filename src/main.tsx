@@ -1,5 +1,6 @@
 import { StrictMode } from 'react';
 import { render } from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 import { App } from './App';
 
@@ -7,7 +8,9 @@ const root = document.getElementById('root');
 if (root) {
   render(
     <StrictMode>
-      <App />
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
+        <App />
+      </BrowserRouter>
     </StrictMode>,
     root,
   );
